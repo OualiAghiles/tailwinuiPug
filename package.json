@@ -4,8 +4,10 @@
   "description": "",
   "scripts": {
     "predev": "rm -rf dist/*",
-    "dev": "parcel ./src/index.pug ./src/components/stacked.pug --no-cache --port 9999 --open ",
-    "prebuild": "rm -rf build/*"
+    "dev": "parcel ./src/**/*.pug --no-cache --port 9999 --open ",
+    "prebuild": "rm -rf build/*",
+    "build": "parcel build ./src/**/*.pug --no-cache --no-source-maps ",
+    "postbuild": "cp ./app/static/robots.txt ./build/; cp ./app/static/humans.txt ./build/; cp -R ./app/static/favicon/ ./build/favicon/; cp ./app/static/favicon/favicon.ico ./build/; echo '✨  Build complete. '"
   },
   "keywords": [],
   "author": "",
