@@ -1,0 +1,19 @@
+li
+  .group.relative(class='before:absolute before:-inset-2.5 before:rounded-[20px] before:bg-gray-50 before:opacity-0 hover:before:opacity-100')
+    .relative.overflow-hidden.rounded-lg.bg-gray-100.ring-1(class='aspect-[2/1] ring-gray-900/10')
+      img.absolute.inset-0.h-full.w-full(:src="el.src" :srcset="el.src" alt='')
+    h4.mt-4.text-sm.font-medium.text-slate-900(class='group-hover:text-indigo-600')
+      a(:href="el.href")
+        span.absolute.z-10(class='-inset-2.5')
+        span.relative(x-text="el.title")
+    p.relative.text-xs.font-medium.text-slate-500(class='mt-1.5')
+      span.mr-2(x-text=" el.nbr")
+      | components
+// [
+  {
+    href: href,
+    title: title,
+    nbr:nbr,
+    src:src
+  }
+  ]
