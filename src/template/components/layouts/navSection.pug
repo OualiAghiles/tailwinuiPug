@@ -1,0 +1,54 @@
+.grid.items-center(class='grid-cols-[1fr,auto]' x-data="{tab:1}")
+  .flex.min-w-0
+    h2.truncate.text-base.font-medium.leading-7.text-slate-900
+      a(href='#component-7c374464cc6f0c27b1468c35810e1e5d') #{title}
+    p.ml-3.hidden.whitespace-nowrap.rounded-lg.bg-slate-100.px-2.text-xs.font-semibold.leading-6.text-slate-700(class='py-0.5 lg:block') Requires JS
+  button(type='button' aria-hidden='true' style='position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0')
+  .ml-6.flex.items-center
+    .flex.space-x-1.rounded-lg.bg-slate-100(class='p-0.5' role='tablist' aria-orientation='horizontal')
+      button#headlessui-tabs-tab-undefined.flex.items-center.rounded-md.pl-2.pr-2.text-sm.font-semibold.bg-white.shadow(
+        class='py-[0.4375rem] lg:pr-3' 
+        role='tab' type='button' aria-selected='true' tabindex='0'
+        @click="tab = 1"
+        )
+        svg.h-5.w-5.flex-none.stroke-sky-500(fill='none' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg')
+          path(d='M17.25 10c0 1-1.75 6.25-7.25 6.25S2.75 11 2.75 10 4.5 3.75 10 3.75 17.25 9 17.25 10Z')
+          circle(cx='10' cy='10' r='2.25')
+        span.sr-only.text-slate-900(class='lg:not-sr-only lg:ml-2') Preview
+      button#headlessui-tabs-tab-undefined.flex.items-center.rounded-md.pl-2.pr-2.text-sm.font-semibold.bg-white.shadow(
+        class='py-[0.4375rem] lg:pr-3' 
+        role='tab' type='button' aria-selected='true' tabindex='0'
+        @click="tab=2"
+        )
+        svg.h-5.w-5.flex-none.stroke-sky-500(fill='none' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg')
+          path(d='m13.75 6.75 3.5 3.25-3.5 3.25M6.25 13.25 2.75 10l3.5-3.25')
+        span.sr-only.text-slate-900(class='lg:not-sr-only lg:ml-2') Code
+    .ml-6.mr-3.hidden.h-5.w-px(class='bg-slate-900/10 sm:block')
+    .relative.inline-block.text-left(x-data='Components.menu({ open: true })' x-init='init()' @keydown.escape.stop='open = false; focusButton()' @click.away='onClickAway($event)')
+      div
+        button#menu-button.inline-flex.w-full.justify-center.rounded-md.border.border-gray-300.bg-white.px-4.py-2.text-sm.font-medium.text-gray-700.shadow-sm(type='button' class='hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100' x-ref='button' @click='onButtonClick()' @keyup.space.prevent='onButtonEnter()' @keydown.enter.prevent='onButtonEnter()' aria-expanded='true' aria-haspopup='true' x-bind:aria-expanded='open.toString()' @keydown.arrow-up.prevent='onArrowUp()' @keydown.arrow-down.prevent='onArrowDown()')
+          | Lang
+          svg.-mr-1.ml-2.h-5.w-5(x-description='Heroicon name: mini/chevron-down' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true')
+            path(fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z' clip-rule='evenodd')
+      .absolute.right-0.z-10.mt-2.w-32.origin-top-right.rounded-md.bg-white.shadow-lg.ring-1.ring-black.ring-opacity-5(x-show='open' x-transition:enter='transition ease-out duration-100' x-transition:enter-start='transform opacity-0 scale-95' x-transition:enter-end='transform opacity-100 scale-100' x-transition:leave='transition ease-in duration-75' x-transition:leave-start='transform opacity-100 scale-100' x-transition:leave-end='transform opacity-0 scale-95' class='focus:outline-none' x-ref='menu-items' x-description='Dropdown menu, show/hide based on menu state.' x-bind:aria-activedescendant='activeDescendant' role='menu' aria-orientation='vertical' aria-labelledby='menu-button' tabindex='-1' @keydown.arrow-up.prevent='onArrowUp()' @keydown.arrow-down.prevent='onArrowDown()' @keydown.tab='open = false' @keydown.enter.prevent='open = false; focusButton()' @keyup.space.prevent='open = false; focusButton()')
+        .py-1(role='none')
+          a#menu-item-0.text-gray-700.block.px-4.py-2.text-sm(href='#' x-state:on='Active' x-state:off='Not Active' :class="{ 'bg-gray-100 text-gray-900': activeIndex === 0, 'text-gray-700': !(activeIndex === 0) }" role='menuitem' tabindex='-1' @mouseenter='activeIndex = 0' @mouseleave='activeIndex = -1' @click='open = false; focusButton()') HTML
+          a#menu-item-1.text-gray-700.block.px-4.py-2.text-sm(href='#' :class="{ 'bg-gray-100 text-gray-900': activeIndex === 1, 'text-gray-700': !(activeIndex === 1) }" role='menuitem' tabindex='-1' @mouseenter='activeIndex = 1' @mouseleave='activeIndex = -1' @click='open = false; focusButton()') PUG
+
+    button.group.relative.ml-2.hidden.h-9.w-9.items-center.justify-center(class='sm:flex')
+      include ../../fragments/svgCopy
+  div(class='col-span-2 row-start-2 min-w-0')
+    style.
+        .iframe {
+          height: 631px;
+        }
+        @media (min-width: 704px) {
+          .iframe {
+            height: 631px;
+          }
+        }
+    div(class="iframe w-full overflow-hidden rounded-lg ring-1 ring-slate-900/10 mt-4 focus:outline-none")
+      div(x-show="tab === 1")
+        iframe.iframe.w-full(src=iframe, frameborder="0") 
+      div.iframe.w-full.overflow-scroll(x-show="tab === 2")
+        block code
