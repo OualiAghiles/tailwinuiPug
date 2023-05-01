@@ -1,0 +1,26 @@
+doctype html
+html.h-full.bg-gray-100(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    script(defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js")
+
+    block header
+      script(src="../../../main.js" type="module")
+      link(rel="stylesheet", href="../../../style.css")
+    title Vite App
+  body.h-full
+    .bg-white
+      .min-h-full
+        block heading
+          include ../../navbar
+          include ../../header
+        div(class="relative mx-auto mt-20 w-full max-w-7xl px-4 sm:px-6 lg:px-8")
+          .flex.flex-col
+            h1.mt-3.text-3xl.font-extrabold.tracking-tight.text-slate-900 Stacked Layouts
+            nav.order-first.flex.space-x-2.text-sm.font-semibold(aria-label='Breadcrumbs')
+              a.text-slate-500(class='hover:text-slate-600' href='/components#product-application-ui') Application UI
+              .select-none.text-slate-400(aria-hidden='true') /
+              a.text-slate-500(class='hover:text-slate-600' href='/components#product-application-ui-application-shells') Application Shells
+          div(class="mt-10 space-y-24 pb-px")
+            block sections
