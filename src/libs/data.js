@@ -240,16 +240,16 @@ const data = () => {
                   '../img/category-thumbnails/application-ui/stacked.png',
                   import.meta.url
                 ),
-                "href": "./components/stacked.html",
+                "href": "./template/components/application-ui/application-shell/stacked/stacked.html",
                 "title": "Stacked Layouts",
-                "nbr": "3"
+                "nbr": "9"
               },
               {
                 "src": new URL(
                   '../img/category-thumbnails/application-ui/sidebar.png',
                   import.meta.url
                 ),
-                "href": "./components/application-ui/application-shells/sidebar",
+                "href": "./template/components/application-ui/application-shell/sidebar/sidebar.html",
                 "title": "Sidebar Layouts",
                 "nbr": "6"
               },
@@ -258,7 +258,7 @@ const data = () => {
                   '../img/category-thumbnails/application-ui/multi-column.png',
                   import.meta.url
                 ),
-                "href": "./components/application-ui/application-shells/multi-column",
+                "href": "./template/components/application-ui/application-shell/stacked/multi-column.html",
                 "title": "Multi-Column Layouts",
                 "nbr": "4"
               },

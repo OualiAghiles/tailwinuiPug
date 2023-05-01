@@ -1,0 +1,92 @@
+extends ../../../layouts/pageCode
+block header 
+  script(src="../../../../../main.js" type="module")
+  link(rel="stylesheet", href="../../../../../style.css")
+block heading
+  include ../../../../navbar
+  include ../../../../header
+block sections
+  
+  section
+    - var iframe = "./brand_nav_with_overlap/brand_nav_with_overlap.pug"
+    - var title = "brand_nav_with_overlap"
+    include ../../../layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ./brand_nav_with_overlap/brand_nav_with_overlap_code.pug
+        div(x-show="lang === 1")
+          include ./brand_nav_with_overlap/brand_nav_with_overlap_html_code.pug
+  section
+    - var iframe = "./branded_nav_with_compact_white_page_header/branded_nav_with_compact_white_page_header.pug"
+    - var title = "branded_nav_with_compact_white_page_header"
+    include ../../../layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ./branded_nav_with_compact_white_page_header/branded_nav_with_compact_white_page_header_code.pug
+        div(x-show="lang === 1")
+          include ./branded_nav_with_compact_white_page_header/branded_nav_with_compact_white_page_header_html_code.pug
+  section
+    - var iframe = "./branded_nav_with_white_page_header/branded_nav_with_white_page_header.pug"
+    - var title = "branded_nav_with_white_page_header"
+    include ../../../layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ./branded_nav_with_white_page_header/branded_nav_with_white_page_header_code.pug
+        div(x-show="lang === 1")
+          include ./branded_nav_with_white_page_header/branded_nav_with_white_page_header_html_code.pug
+  section
+    - var iframe = "./dark_nav_with_compact_white_page_header/dark_nav_with_compact_white_page_header.pug"
+    - var title = "dark_nav_with_compact_white_page_header"
+    include ../../../layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ./dark_nav_with_compact_white_page_header/dark_nav_with_compact_white_page_header_code.pug
+        div(x-show="lang === 1")
+          include ./dark_nav_with_compact_white_page_header/dark_nav_with_compact_white_page_header_html_code.pug
+  section
+    - var iframe = "./dark_nav_with_overlap/dark_nav_with_overlap.pug"
+    - var title = "dark_nav_with_overlap"
+    include ../../../layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ./dark_nav_with_overlap/dark_nav_with_overlap_code.pug
+        div(x-show="lang === 1")
+          include ./dark_nav_with_overlap/dark_nav_with_overlap_html_code.pug
+  section
+    - var iframe = "./dark_nav_with_white_page_header/dark_nav_with_white_page_header.pug"
+    - var title = "dark_nav_with_white_page_header"
+    include ../../../layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ./dark_nav_with_white_page_header/dark_nav_with_white_page_header_code.pug
+        div(x-show="lang === 1")
+          include ./dark_nav_with_white_page_header/dark_nav_with_white_page_header_html_code.html
+  section
+    - var iframe = "./light_nav_on_gray_background/light_nav_on_gray_background.pug"
+    - var title = "light_nav_on_gray_background"
+    include ../../../layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ./light_nav_on_gray_background/light_nav_on_gray_background_code.pug
+        div(x-show="lang === 1")
+          include ./light_nav_on_gray_background/light_nav_on_gray_background_html_code.html
+
+
+  section
+    - var iframe = "./light_nav_with_bottom_border/light_nav_with_bottom_border.pug"
+    - var title = "light_nav_with_bottom_border"
+    include ../../../layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ./light_nav_with_bottom_border/light_nav_with_bottom_border_code.pug
+        div(x-show="lang === 1")
+          include ./light_nav_with_bottom_border/light_nav_with_bottom_border_html_code.html
+  section
+    - var iframe = "./two_row_navigation_with_overlap/two_row_navigation_with_overlap.pug"
+    - var title = "two_row_navigation_with_overlap"
+    include ../../../layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ./two_row_navigation_with_overlap/two_row_navigation_with_overlap_code.pug
+        div(x-show="lang === 1")
+          include ./two_row_navigation_with_overlap/two_row_navigation_with_overlap_html_code.html

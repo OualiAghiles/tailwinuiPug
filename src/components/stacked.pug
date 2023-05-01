@@ -6,17 +6,87 @@ block heading
   include ../template/navbar
   include ../template/header
 block sections
-  section
-    - var iframe = "./application-ui/application-shells/light-nav"
-    - var title = "light_nav_with_bottom_border"
-    include ../template/components/layouts/navSection
-      block code
-        include ./application-ui/application-shells/light-nav-code-pug.pug
+  
   section
     - var iframe = "../template/components/application-ui/application-shell/stacked/brand_nav_with_overlap/brand_nav_with_overlap.pug"
     - var title = "brand_nav_with_overlap"
     include ../template/components/layouts/navSection
       block code
-        include ../template/components/application-ui/application-shell/stacked/brand_nav_with_overlap/brand_nav_with_overlap_code.pug
+        div(x-show="lang === 2")
+          include ../template/components/application-ui/application-shell/stacked/brand_nav_with_overlap/brand_nav_with_overlap_code.pug
+        div(x-show="lang === 1")
+          include ../template/components/application-ui/application-shell/stacked/brand_nav_with_overlap/brand_nav_with_overlap_html_code.pug
+  section
+    - var iframe = "../template/components/application-ui/application-shell/stacked/branded_nav_with_compact_white_page_header/branded_nav_with_compact_white_page_header.pug"
+    - var title = "branded_nav_with_compact_white_page_header"
+    include ../template/components/layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ../template/components/application-ui/application-shell/stacked/branded_nav_with_compact_white_page_header/branded_nav_with_compact_white_page_header_code.pug
+        div(x-show="lang === 1")
+          include ../template/components/application-ui/application-shell/stacked/branded_nav_with_compact_white_page_header/branded_nav_with_compact_white_page_header_html_code.pug
+  section
+    - var iframe = "../template/components/application-ui/application-shell/stacked/branded_nav_with_white_page_header/branded_nav_with_white_page_header.pug"
+    - var title = "branded_nav_with_white_page_header"
+    include ../template/components/layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ../template/components/application-ui/application-shell/stacked/branded_nav_with_white_page_header/branded_nav_with_white_page_header_code.pug
+        div(x-show="lang === 1")
+          include ../template/components/application-ui/application-shell/stacked/branded_nav_with_white_page_header/branded_nav_with_white_page_header_html_code.pug
+  section
+    - var iframe = "../template/components/application-ui/application-shell/stacked/dark_nav_with_compact_white_page_header/dark_nav_with_compact_white_page_header.pug"
+    - var title = "dark_nav_with_compact_white_page_header"
+    include ../template/components/layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ../template/components/application-ui/application-shell/stacked/dark_nav_with_compact_white_page_header/dark_nav_with_compact_white_page_header_code.pug
+        div(x-show="lang === 1")
+          include ../template/components/application-ui/application-shell/stacked/dark_nav_with_compact_white_page_header/dark_nav_with_compact_white_page_header_html_code.pug
+  section
+    - var iframe = "../template/components/application-ui/application-shell/stacked/dark_nav_with_overlap/dark_nav_with_overlap.pug"
+    - var title = "dark_nav_with_overlap"
+    include ../template/components/layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ../template/components/application-ui/application-shell/stacked/dark_nav_with_overlap/dark_nav_with_overlap_code.pug
+        div(x-show="lang === 1")
+          include ../template/components/application-ui/application-shell/stacked/dark_nav_with_overlap/dark_nav_with_overlap_html_code.pug
+  section
+    - var iframe = "../template/components/application-ui/application-shell/stacked/dark_nav_with_white_page_header/dark_nav_with_white_page_header.pug"
+    - var title = "dark_nav_with_white_page_header"
+    include ../template/components/layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ../template/components/application-ui/application-shell/stacked/dark_nav_with_white_page_header/dark_nav_with_white_page_header_code.pug
+        div(x-show="lang === 1")
+          include ../template/components/application-ui/application-shell/stacked/dark_nav_with_white_page_header/dark_nav_with_white_page_header_html_code.html
+  section
+    - var iframe = "../template/components/application-ui/application-shell/stacked/light_nav_on_gray_background/light_nav_on_gray_background.pug"
+    - var title = "light_nav_on_gray_background"
+    include ../template/components/layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ../template/components/application-ui/application-shell/stacked/light_nav_on_gray_background/light_nav_on_gray_background_code.pug
+        div(x-show="lang === 1")
+          include ../template/components/application-ui/application-shell/stacked/light_nav_on_gray_background/light_nav_on_gray_background_html_code.html
 
 
+  section
+    - var iframe = "../template/components/application-ui/application-shell/stacked/light_nav_with_bottom_border/light_nav_with_bottom_border.pug"
+    - var title = "light_nav_with_bottom_border"
+    include ../template/components/layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ../template/components/application-ui/application-shell/stacked/light_nav_with_bottom_border/light_nav_with_bottom_border_code.pug
+        div(x-show="lang === 1")
+          include ../template/components/application-ui/application-shell/stacked/light_nav_with_bottom_border/light_nav_with_bottom_border_html_code.html
+  section
+    - var iframe = "../template/components/application-ui/application-shell/stacked/two_row_navigation_with_overlap/two_row_navigation_with_overlap.pug"
+    - var title = "two_row_navigation_with_overlap"
+    include ../template/components/layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ../template/components/application-ui/application-shell/stacked/two_row_navigation_with_overlap/two_row_navigation_with_overlap_code.pug
+        div(x-show="lang === 1")
+          include ../template/components/application-ui/application-shell/stacked/two_row_navigation_with_overlap/two_row_navigation_with_overlap_html_code.html

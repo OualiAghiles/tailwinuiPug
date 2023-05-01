@@ -1,0 +1,19 @@
+extends ../../../layouts/pageCode
+block header 
+
+  script(defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js")
+  script(src="../../../../../main.js" type="module")
+  link(rel="stylesheet", href="../../../../../style.css")
+block heading
+  include ../../../../navbar
+  include ../../../../header
+block sections
+  section
+    - var iframe = "./light_sidebar/light_sidebar.pug"
+    - var title = "light_sidebar"
+    include ../../../layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ./light_sidebar/lite_sidebar_code.pug
+        div(x-show="lang === 1")
+          include ./light_sidebar/light_sidebar.html

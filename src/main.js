@@ -1,5 +1,7 @@
 import "./style.css";
 import "./libs/prism";
+
+import "./libs/components";
 import data from "./libs/data";
 //import Alpine from "alpinejs";
 //import collapse from '@alpinejs/collapse'
