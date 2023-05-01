@@ -1,3 +1,12 @@
+mixin badge_with_dot( text)
+
+  - var  clr = "indigo"
+  - var colorcls = `bg-${clr}-100 text-${clr}-800`
+
+  span.inline-flex.items-center.rounded-full.font-medium.text-xs(class=`'px-2.5 py-0.5' + ${colorcls}` )
+    svg.text-indigo-400.h-2.w-2(class="mr-1.5 -ml-1 " fill='currentColor', viewBox='0 0 8 8')
+      circle(cx='4', cy='4', r='3')
+    span()= text
 doctype html
 html.h-full.bg-gray-100(lang='en')
   head
@@ -9,11 +18,17 @@ html.h-full.bg-gray-100(lang='en')
     link(rel="stylesheet", href="./style.css")
     title Vite App
   body.h-full
+    
+
+
+      
     .bg-white
       .min-h-full
         include template/navbar
         include template/header
         main.mt-8
+          +badge_with_dot('sm', 'Today')
+          +badge_with_dot('lg', 'Today')
           div(class='relative mx-auto w-full max-w-7xl space-y-20 px-4  sm:px-6 lg:px-8')
             div(class='mt-10 divide-y divide-gray-100 border-t border-slate-100 lg:mt-12' x-data="store")
               include template/appUi/mixin

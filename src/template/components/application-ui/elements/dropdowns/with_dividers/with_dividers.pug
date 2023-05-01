@@ -3,10 +3,10 @@ block header
   script(src="../../../../../../main.js" type="module")
   link(rel="stylesheet", href="../../../../../../style.css")
 block body
-  div(x-data="dropdown")
+  div
     // This example requires Tailwind CSS v2.0+
     .flex.justify-end.p-8
-      .relative.inline-block.text-left
+      .relative.inline-block.text-left(x-data="dropdown")
 
         button#menu-button.inline-flex.w-full.justify-center.rounded-md.border.border-gray-300.bg-white.px-4.py-2.text-sm.font-medium.text-gray-700.shadow-sm(type='button' class='hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100' aria-expanded='true' aria-haspopup='true' x-bind="trigger")
           | Options
