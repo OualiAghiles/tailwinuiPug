@@ -315,7 +315,7 @@ const data = () => {
                   '../img/category-thumbnails/application-ui/dropdowns.png',
                   import.meta.url
                 ),
-                "href": "./components/application-ui/application-shells/dropdowns",
+                "href": "./template/components/application-ui/elements/dropdowns/dropdown.html",
                 "title": "dropdowns",
                 "nbr": "5"
               },

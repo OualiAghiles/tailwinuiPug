@@ -1,0 +1,27 @@
+extends ../../../../layouts/layout_base
+block header
+  script(src="../../../../../../main.js" type="module")
+  link(rel="stylesheet", href="../../../../../../style.css")
+block body
+  div
+    // This example requires Tailwind CSS v2.0+
+    .flex.justify-end.p-8(x-data="dropdown")
+      .relative.inline-block.text-left
+        div
+          button#menu-button.inline-flex.w-full.justify-center.rounded-md.border.border-gray-300.bg-white.px-4.py-2.text-sm.font-medium.text-gray-700.shadow-sm(type='button', class='hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100', aria-expanded='true', aria-haspopup='true' x-bind="trigger")
+            | Options
+            // Heroicon name: mini/chevron-down
+            svg.-mr-1.ml-2.h-5.w-5(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 20 20', fill='currentColor', aria-hidden='true')
+              path(fill-rule='evenodd', d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z', clip-rule='evenodd')
+        .absolute.right-0.z-10.mt-2.w-56.origin-top-right.divide-y.divide-gray-100.rounded-md.bg-white.shadow-lg.ring-1.ring-black.ring-opacity-5(class='focus:outline-none', role='menu', aria-orientation='vertical', aria-labelledby='menu-button', tabindex='-1' x-bind="dialogue")
+          .px-4.py-3(role='none')
+            p.text-sm(role='none') Signed in as
+            p.truncate.text-sm.font-medium.text-gray-900(role='none') tom@example.com
+          .py-1(role='none')
+            // Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700"
+            a#menu-item-0.text-gray-700.block.px-4.py-2.text-sm(href='#', role='menuitem', tabindex='-1') Account settings
+            a#menu-item-1.text-gray-700.block.px-4.py-2.text-sm(href='#', role='menuitem', tabindex='-1') Support
+            a#menu-item-2.text-gray-700.block.px-4.py-2.text-sm(href='#', role='menuitem', tabindex='-1') License
+          .py-1(role='none')
+            form(method='POST', action='#', role='none')
+              button#menu-item-3.text-gray-700.block.w-full.px-4.py-2.text-left.text-sm(type='submit', role='menuitem', tabindex='-1') Sign out

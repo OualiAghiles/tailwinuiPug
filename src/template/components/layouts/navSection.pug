@@ -24,7 +24,7 @@
           path(d='m13.75 6.75 3.5 3.25-3.5 3.25M6.25 13.25 2.75 10l3.5-3.25')
         span.sr-only.text-slate-900(class='lg:not-sr-only lg:ml-2') Code
     .ml-6.mr-3.hidden.h-5.w-px(class='bg-slate-900/10 sm:block')
-    .relative.inline-block.text-left(x-data='Components.menu({ open: true })' x-init='init()' @keydown.escape.stop='open = false; focusButton()' @click.away='onClickAway($event)')
+    .relative.inline-block.text-left(x-data='Components.menu({ open: false })' x-init='init()' @keydown.escape.stop='open = false; focusButton()' @click.away='onClickAway($event)')
       div
         button#menu-button.inline-flex.w-full.justify-center.rounded-md.border.border-gray-300.bg-white.px-4.py-2.text-sm.font-medium.text-gray-700.shadow-sm(type='button' class='hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100' x-ref='button' @click='onButtonClick()' @keyup.space.prevent='onButtonEnter()' @keydown.enter.prevent='onButtonEnter()' aria-expanded='true' aria-haspopup='true' x-bind:aria-expanded='open.toString()' @keydown.arrow-up.prevent='onArrowUp()' @keydown.arrow-down.prevent='onArrowDown()')
           | Lang
@@ -40,8 +40,8 @@
       class='focus:outline-none' 
       x-ref='menu-items' x-description='Dropdown menu, show/hide based on menu state.' x-bind:aria-activedescendant='activeDescendant' role='menu' aria-orientation='vertical' aria-labelledby='menu-button' tabindex='-1' @keydown.arrow-up.prevent='onArrowUp()' @keydown.arrow-down.prevent='onArrowDown()' @keydown.tab='open = false' @keydown.enter.prevent='open = false; focusButton()' @keyup.space.prevent='open = false; focusButton()')
         .py-1(role='none')
-          a#menu-item-0.text-gray-700.block.px-4.py-2.text-sm(href='#' x-state:on='Active' x-state:off='Not Active' :class="{ 'bg-gray-100 text-gray-900': activeIndex === 0, 'text-gray-700': !(activeIndex === 0) }" role='menuitem' tabindex='-1' @mouseenter='activeIndex = 0' @mouseleave='activeIndex = -1' @click='lang=1') HTML
-          a#menu-item-1.text-gray-700.block.px-4.py-2.text-sm(href='#' :class="{ 'bg-gray-100 text-gray-900': activeIndex === 1, 'text-gray-700': !(activeIndex === 1) }" role='menuitem' tabindex='-1' @mouseenter='activeIndex = 1' @mouseleave='activeIndex = -1' @click='lang=2') PUG
+          a#menu-item-0.text-gray-700.block.px-4.py-2.text-sm(href='#' x-state:on='Active' x-state:off='Not Active' :class="{ 'bg-gray-100 text-gray-900': activeIndex === 0, 'text-gray-700': !(activeIndex === 0) }" role='menuitem' tabindex='-1' @mouseenter='activeIndex = 0' @mouseleave='activeIndex = -1' @click.prevent='lang=1 ; open=false') HTML
+          a#menu-item-1.text-gray-700.block.px-4.py-2.text-sm(href='#' :class="{ 'bg-gray-100 text-gray-900': activeIndex === 1, 'text-gray-700': !(activeIndex === 1) }" role='menuitem' tabindex='-1' @mouseenter='activeIndex = 1' @mouseleave='activeIndex = -1' @click.prevent='lang=2; open=false') PUG
 
     button.group.relative.ml-2.hidden.h-9.w-9.items-center.justify-center(class='sm:flex')
       include ../../fragments/svgCopy

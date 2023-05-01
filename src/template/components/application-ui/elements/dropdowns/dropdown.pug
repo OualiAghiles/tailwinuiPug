@@ -1,0 +1,54 @@
+extends ../../../layouts/pageCode
+block header 
+  script(src="../../../../../main.js" type="module")
+  link(rel="stylesheet", href="../../../../../style.css")
+block heading
+  include ../../../../navbar
+  include ../../../../header
+block sections
+  section
+    - var iframe = "./simple/simple.pug"
+    - var title = "simple"
+    include ../../../layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ./simple/simple_code.pug
+        div(x-show="lang === 1")
+          include ./simple/simple.html
+  section
+    - var iframe = "./with_dividers/with_dividers.pug"
+    - var title = "with_dividers"
+    include ../../../layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ./with_dividers/with_dividers_code.pug
+        div(x-show="lang === 1")
+          include ./with_dividers/with_dividers.html
+  section
+    - var iframe = "./with_icons/with_icons.pug"
+    - var title = "with_icons"
+    include ../../../layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ./with_icons/with_icons_code.pug
+        div(x-show="lang === 1")
+          include ./with_icons/with_icons.html
+  section
+    - var iframe = "./with_minimal_menu_icon/with_minimal_menu_icon.pug"
+    - var title = "with_minimal_menu_icon"
+    include ../../../layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ./with_minimal_menu_icon/with_minimal_menu_icon_code.pug
+        div(x-show="lang === 1")
+          include ./with_minimal_menu_icon/with_minimal_menu_icon.html
+  section
+    - var iframe = "./with_simple_header/with_simple_header.pug"
+    - var title = "with_simple_header"
+    include ../../../layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ./with_simple_header/with_simple_header_code.pug
+        div(x-show="lang === 1")
+          include ./with_simple_header/with_simple_header.html
+  

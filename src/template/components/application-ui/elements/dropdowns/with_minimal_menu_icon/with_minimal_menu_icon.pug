@@ -1,0 +1,24 @@
+extends ../../../../layouts/layout_base
+block header
+  script(src="../../../../../../main.js" type="module")
+  link(rel="stylesheet", href="../../../../../../style.css")
+block body
+  div
+    // This example requires Tailwind CSS v2.0+
+    .flex.justify-end.p-8(x-data="dropdown")
+      .relative.inline-block.text-left
+        div
+          button#menu-button.flex.items-center.rounded-full.bg-gray-100.text-gray-400(type='button' class='hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100' aria-expanded='true' aria-haspopup='true' x-bind="trigger")
+            span.sr-only Open options
+            // Heroicon name: mini/ellipsis-vertical
+            svg.h-5.w-5(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill='currentColor' aria-hidden='true')
+              path(d='M10 3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10 8.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM11.5 15.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z')
+
+        .absolute.right-0.z-10.mt-2.w-56.origin-top-right.rounded-md.bg-white.shadow-lg.ring-1.ring-black.ring-opacity-5(class='focus:outline-none' role='menu' aria-orientation='vertical' aria-labelledby='menu-button' tabindex='-1' x-bind="dialogue")
+          .py-1(role='none')
+            // Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700"
+            a#menu-item-0.text-gray-700.block.px-4.py-2.text-sm(href='#' role='menuitem' tabindex='-1') Account settings
+            a#menu-item-1.text-gray-700.block.px-4.py-2.text-sm(href='#' role='menuitem' tabindex='-1') Support
+            a#menu-item-2.text-gray-700.block.px-4.py-2.text-sm(href='#' role='menuitem' tabindex='-1') License
+            form(method='POST' action='#' role='none')
+              button#menu-item-3.text-gray-700.block.w-full.px-4.py-2.text-left.text-sm(type='submit' role='menuitem' tabindex='-1') Sign out
