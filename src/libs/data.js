@@ -316,7 +316,7 @@ const data = () => {
                   import.meta.url
                 ),
                 "href": "./template/components/application-ui/elements/dropdowns/dropdown.html",
-                "title": "dropdowns",
+                "title": "Dropdowns",
                 "nbr": "5"
               },
               {
@@ -324,8 +324,8 @@ const data = () => {
                   '../img/category-thumbnails/application-ui/badges.png',
                   import.meta.url
                 ),
-                "href": "./components/application-ui/application-shells/badges",
-                "title": "badges",
+                "href": "./template/components/application-ui/elements/badges/badges.html",
+                "title": "Badges",
                 "nbr": "7"
               },
               {

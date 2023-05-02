@@ -1,0 +1,10 @@
+extends ../../../../layouts/layout_base
+block header
+  script(src="../../../../../../main.js" type="module")
+  link(rel="stylesheet", href="../../../../../../style.css")
+block body
+  include ./mixin
+  +badge_with_remove_btn("lg", "lg green", "green")
+  +badge_with_remove_btn("lg", "lg indigo", "indigo")
+  +badge_with_remove_btn("sm", "sm purple", "purple")
+  +badge_with_remove_btn("sm", "sm yellow", "yellow")

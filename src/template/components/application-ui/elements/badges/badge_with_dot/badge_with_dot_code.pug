@@ -1,0 +1,24 @@
+pre
+  code.lang-pug.
+    - var clslg = "py-0.5"
+    - var clssm = "px-2.5 py-0.5"
+    mixin badge_with_dot(size, text, color)
+      - var cls = `${clslg}  bg-${color}-100 text-${color}-800`
+      if size === 'lg'
+        span.inline-flex.items-center.rounded-full.px-3.text-sm.font-medium(class= cls )
+          svg.-ml-1.h-2.w-2(class=`mr-1.5 text-${color}-400` fill='currentColor' viewBox='0 0 8 8')
+            circle(cx='4' cy='4' r='3')
+          | #{text}
+
+
+      if size === 'sm'
+        // This example requires Tailwind CSS v2.0+
+        - var cls = `${clssm}  bg-${color}-100 text-${color}-800`
+        span.inline-flex.items-center.rounded-full.text-xs.font-medium(class=cls)
+          svg.h-2.w-2(class=`-ml-0.5 mr-1.5 text-${color}-400`  fill='currentColor' viewBox='0 0 8 8')
+            circle(cx='4' cy='4' r='3')
+          | #{text}
+
+    //- how to use
+    +badge_with_dot('sm', 'Last news', 'green')
+        

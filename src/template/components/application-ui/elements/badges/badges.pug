@@ -1,0 +1,53 @@
+extends ../../../layouts/pageCode
+block header 
+  script(src="../../../../../main.js" type="module")
+  link(rel="stylesheet", href="../../../../../style.css")
+block heading
+  include ../../../../navbar
+  include ../../../../header
+block sections
+  section
+    - var iframe = "./badge_with_dot/badge_with_dot.pug"
+    - var title = "badge_with_dot"
+    include ../../../layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ./badge_with_dot/badge_with_dot_code.pug
+        div(x-show="lang === 1")
+          include ./badge_with_dot/badge_with_dot.html
+  section
+    - var iframe = "./badge_with_remove_button/badge_with_remove_button.pug"
+    - var title = "badge_with_remove_button"
+    include ../../../layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ./badge_with_remove_button/badge_with_remove_button_code.pug
+        div(x-show="lang === 1")
+          include ./badge_with_remove_button/badge_with_remove_button.html
+  section
+    - var iframe = "./basic_badges/basic_badges.pug"
+    - var title = "basic_badges"
+    include ../../../layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ./basic_badges/basic_badges_code.pug
+        div(x-show="lang === 1")
+          include ./basic_badges/basic_badges.html
+  section
+    - var iframe = "./large_badges/large_badges.pug"
+    - var title = "large_badges"
+    include ../../../layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ./large_badges/large_badges_code.pug
+        div(x-show="lang === 1")
+          include ./large_badges/large_badges.html
+  section
+    - var iframe = "./large_rounded_badges/large_rounded_badges.pug"
+    - var title = "large_rounded_badges"
+    include ../../../layouts/navSection
+      block code
+        div(x-show="lang === 2")
+          include ./large_rounded_badges/large_rounded_badges_code.pug
+        div(x-show="lang === 1")
+          include ./large_rounded_badges/large_rounded_badges.html

@@ -1,0 +1,7 @@
+pre 
+  code.lang-pug.
+    span(class="inline-flex items-center rounded-md bg-gray-100 px-2.5 py-0.5 text-sm font-medium text-gray-800") Badge
+    //- or with mixin
+    mixin large_rounded_badges(text,color)
+      span.inline-flex.items-center.rounded-md.text-sm.font-medium(class=`px-2.5 py-0.5 bg-${color}-100 text-${color}-800`)= text
+    +large_rounded_badges('text', 'red')

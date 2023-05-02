@@ -1,0 +1,10 @@
+extends ../../../../layouts/layout_base
+block header
+  script(src="../../../../../../main.js" type="module")
+  link(rel="stylesheet", href="../../../../../../style.css")
+block body
+  include ./mixin
+  +rounded_badges_with_dot("green", "green")
+  +rounded_badges_with_dot("red", "red")
+  +rounded_badges_with_dot("blue", "blue")
+  +rounded_badges_with_dot("purple", "purple")

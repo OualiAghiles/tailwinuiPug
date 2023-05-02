@@ -1,0 +1,10 @@
+extends ../../../../layouts/layout_base
+block header
+  script(src="../../../../../../main.js" type="module")
+  link(rel="stylesheet", href="../../../../../../style.css")
+block body
+  include ./mixin
+  +basic_badge("green", "green")
+  +basic_badge("red", "red")
+  +basic_badge("blue", "blue")
+  +basic_badge("purple", "purple")

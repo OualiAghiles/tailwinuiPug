@@ -1,0 +1,7 @@
+pre 
+  code.lang-pug.
+    span(class="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800") Badge
+    //- or with mixin
+    mixin basic_badge(text,color)
+      span.inline-flex.items-center.rounded-full.text-xs.font-medium(class=`px-2.5 py-0.5 bg-${color}-100.text-${color}-800`)= text
+    +basic_badge('text', 'red')
