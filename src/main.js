@@ -1,4 +1,5 @@
 import data from "./libs/data";
+import tabs from "./libs/tabs";
 import "./style.css";
 import "./libs/prism";
 import "./libs/components";
