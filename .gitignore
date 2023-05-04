@@ -25,3 +25,4 @@ dist-ssr
 package-lock.json
 .parcel-cache
 yarn.lock
+.vscode/
